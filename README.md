@@ -115,3 +115,38 @@
 - Displays film cards from wishlist
 - Redux state + localStorage persistence
 - Maintains data until user removes from UI
+
+---
+
+# Implementation Steps
+
+## 1. Package Installation
+Install the required Express.js package and its TypeScript types.
+
+## 2. Server Entry Creation
+Create a new server entry file that will:
+- Handle SSR rendering using ReactDOM's `renderToString`
+- Wrap your application with Redux Provider and StaticRouter
+- Capture the initial Redux state
+
+## 3. Express Server Setup
+Configure an Express server that will:
+- Integrate with Vite's middleware
+- Serve your SSR-rendered application
+- Inject the preloaded Redux state into the HTML template
+
+## 4. Client-Side Hydration
+Modify your existing client entry to:
+- Hydrate the app instead of rendering from scratch
+- Pick up the server-injected Redux state
+- Initialize the store with the preloaded state
+
+## 5. HTML Template Modification
+Update your main HTML file to include:
+- Placeholder for SSR-rendered content
+- Slot for preloaded state injection
+
+## 6. Build Script Updates
+Add new scripts to `package.json` for:
+- Building both client and server bundles
+- Previewing the SSR application
