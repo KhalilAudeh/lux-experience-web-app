@@ -1,0 +1,30 @@
+.skeleton-loader {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+
+  .skeleton-card {
+    min-width: 150px;
+  }
+
+  .skeleton-poster {
+    width: 100%;
+    aspect-ratio: 2/3;
+    background: #eee;
+    border-radius: 8px;
+    animation: pulse 1.5s infinite;
+  }
+
+  .skeleton-title {
+    width: 80%;
+    height: 16px;
+    margin-top: 0.5rem;
+    background: #eee;
+    animation: pulse 1.5s infinite;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}

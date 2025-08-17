@@ -1,0 +1,140 @@
+.film-details {
+  margin: 2rem 3rem;
+
+  &-container {
+    display: flex;
+    gap: 5rem;
+    align-items: center;
+  }
+
+  &-poster {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  &-info {
+    width: fit-content;
+
+    .overview {
+      font-size: 1.5rem;
+    }
+  }
+
+  &-extra-info {
+    display: grid;
+    border: 2px solid lightgray;
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+    margin-top: 3rem;
+    font-size: 1.25rem;
+
+    span {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  // Genre badge
+  .genre-badge {
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 1.25rem;
+  }
+
+  // Status indicators
+  .status-released {
+    color: #4caf50;
+  }
+  .status-rumored {
+    color: #ff9800;
+  }
+  .status-post-production {
+    color: #2196f3;
+  }
+}
+
+// Genre-specific accents
+.film-details.genre-878 {
+  // Sci-Fi
+  font-family: $primary-font;
+
+  .wishlist-btn {
+    font-family: $primary-font;
+    color: $dark-red;
+    border: 1px solid $dark-red;
+
+    &:hover {
+      background: $dark-red;
+      color: snow;
+    }
+
+    &::before {
+      content: "\2763";
+      margin-right: 0.5rem;
+    }
+  }
+}
+
+.film-details.genre-28 {
+  // Action
+  font-family: $secondary-font;
+
+  .wishlist-btn {
+    font-family: $secondary-font;
+    color: $gold;
+    border: 1px solid $gold;
+
+    &:hover {
+      background: $gold;
+      color: snow;
+    }
+
+    &::before {
+      content: "\2B50";
+      margin-right: 0.5rem;
+    }
+  }
+}
+
+.film-details.genre-14 {
+  // Fantasy
+  font-family: $fantasy-font;
+
+  .wishlist-btn {
+    font-family: $fantasy-font;
+    color: $purple;
+    border: 1px solid $purple;
+
+    &:hover {
+      background: $purple;
+      color: snow;
+    }
+
+    &::before {
+      content: "\2764";
+      margin-right: 0.5rem;
+    }
+  }
+}
+
+.film-details.genre-16 {
+  // Animation
+  font-family: $monospace-font;
+
+  .wishlist-btn {
+    font-family: $monospace-font;
+    color: $primary-color;
+    border: 1px solid $primary-color;
+
+    &:hover {
+      background: $primary-color;
+      color: snow;
+    }
+
+    &::before {
+      content: "\1F31F";
+      margin-right: 0.5rem;
+    }
+  }
+}

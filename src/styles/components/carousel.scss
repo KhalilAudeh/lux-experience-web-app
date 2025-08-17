@@ -1,0 +1,41 @@
+.carousel {
+  position: relative;
+
+  &-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &-title {
+    color: $secondary-color;
+  }
+
+  &-controls {
+    button {
+      color: $secondary-color;
+      background: lightsteelblue;
+      border: none;
+      font-size: 2rem;
+      margin-left: 1rem;
+      padding: 5px 5px 0 5px;
+      transition: opacity 0.2s;
+      cursor: pointer;
+
+      &.disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+
+      &:not(.disabled):hover {
+        color: snow;
+      }
+    }
+  }
+
+  &-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 2rem;
+  }
+}

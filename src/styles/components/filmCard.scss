@@ -1,0 +1,19 @@
+.film-card {
+  width: min-content;
+  cursor: pointer;
+  transition: transform 0.2s;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  .film-poster {
+    border-radius: 8px;
+    object-fit: cover;
+  }
+
+  .film-title {
+    margin-top: 0.5rem;
+    text-align: center;
+  }
+}

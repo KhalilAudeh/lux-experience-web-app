@@ -1,0 +1,68 @@
+body {
+  font-family: $primary-font;
+  margin: 2rem;
+}
+
+.main-title {
+  color: $primary-color;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.wishlist-btn {
+  color: $secondary-color;
+  background: none;
+  border: 1px solid $secondary-color;
+  border-radius: 0.5rem;
+  font-size: 1.25rem;
+  padding: 0.5rem 1.5rem;
+  margin-top: 2rem;
+  cursor: pointer;
+
+  &:hover {
+    background: $secondary-color;
+    color: snow;
+  }
+
+  &::before {
+    content: "\2665";
+    margin-right: 0.5rem;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+}
+
+.back-btn {
+  color: $secondary-color;
+  background: none;
+  border: 1px solid $secondary-color;
+  border-radius: 0.5rem;
+  font-size: 1.25rem;
+  padding: 0.5rem 1.5rem;
+  margin-top: 2rem;
+  cursor: pointer;
+
+  &:hover {
+    background: $secondary-color;
+    color: snow;
+  }
+}
+
+.remove-btn {
+  color: $red;
+  background: none;
+  border: 1px solid $red;
+  border-radius: 0.5rem;
+  font-size: 1.25rem;
+  padding: 0.5rem 1.5rem;
+  margin-top: 2rem;
+  cursor: pointer;
+
+  &:hover {
+    background: $red;
+    color: snow;
+  }
+}
